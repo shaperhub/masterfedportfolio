@@ -90,7 +90,7 @@ const Navbar = () => {
         {/* <Link href="/">
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link> */}
-        <Link href="mailto:code@masterfed.com">
+        <Link href="mailto:contact@masterfed.com">
           <Image src="/email.png" alt="Email Icon" width={24} height={24} />
         </Link>
         <Link href="https://www.linkedin.com/in/leonwoke/">

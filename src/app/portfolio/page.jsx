@@ -34,7 +34,7 @@ const items = [
     id: 4,
     color: "from-violet-300 to-purple-300",
     title: "Regrev",
-    desc: "This is a sample landing page that I made for a startup tech company. I am currently working on their company website.",
+    desc: "This is a sample landing page that I made for a startup tech company.",
     img: "/regrev.png",
     link: "https://regrevt.vercel.app/",
   },
@@ -78,7 +78,7 @@ const PortfolioPage = () => {
                     {item.title}
                   </h1>
                   <div className="relative -mt-4 w-80 h-48 md:w-96 md:h-64 lg:w-[400px] lg:h-[230px]">
-                    <Image src={item.img} alt="" fill sizes="(max-width: 768px) 320px, (max-width: 1200px) 400px"/>
+                    <Image src={item.img} alt="" fill sizes="(max-width: 768px) 320px, (max-width: 1200px) 400px" blurDataURL={item.img} placeholder="blur" loading="lazy"/>
                   </div>
                   <p className="w-80 md:w96 lg:w-[400px] lg:text-lg">
                     {item.desc}
@@ -105,7 +105,7 @@ const PortfolioPage = () => {
                   {item.title}
                 </h1>
                 <div className="relative w-72 h-40">
-                  <Image src={item.img} alt="" fill sizes="(max-width: 767px) 288px, (max-width: 1200px) 400px"/>
+                  <Image src={item.img} alt="" fill sizes="(max-width: 767px) 288px, (max-width: 1200px) 400px" blurDataURL={item.img} placeholder="blur" loading="lazy"/>
                 </div>
                 <p className="w-72 mt-1">
                   {item.desc}
@@ -137,7 +137,7 @@ const PortfolioPage = () => {
             </defs>
             <text fill="#000">
               <textPath xlinkHref="#circlePath" className="text-xl">
-                FrontEnd Web Developer
+                Front End Web Developer
               </textPath>
             </text>
           </motion.svg>

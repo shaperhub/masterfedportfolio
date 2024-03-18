@@ -17,7 +17,7 @@ const Homepage = () => {
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 gap-8">
         {/* IMAGE CONTAINER */}
         <div className="hidden lg:flex h-1/2 lg:h-full md:w-1/2 relative">
-          <Image src="/laptop.jpg" alt="" fill className="object-contain" priority={true} sizes="(max-width: 768px) 300px, (max-width: 1200px) 400px"/>
+          <Image src="/laptop.jpg" alt="" fill className="object-contain" priority={true} sizes="(max-width: 768px) 300px, (max-width: 1200px) 400px" blurDataURL="/laptop.jpg" placeholder="blur"/>
         </div>
         {/* TEXT CONTAINER */}
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 justify-center text-center lg:text-left pt-40 sm:pt-16 lg:pt-0">
