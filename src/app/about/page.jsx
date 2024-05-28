@@ -1,13 +1,10 @@
 "use client";
 
-import Brain from "@/components/brain";
-import { motion, useInView, useScroll } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const AboutPage = () => {
   const containerRef = useRef();
-
-  const { scrollYProgress } = useScroll({ container: containerRef });
 
   const skillRef = useRef();
   // const isSkillRefInView = useInView(skillRef, {once:true});
@@ -33,7 +30,7 @@ const AboutPage = () => {
             <h1 className="font-bold text-2xl">ABOUT ME</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              I have always had a good eye for design and a love for tech, so I became a FrontEnd Web Developer. 
+              I have always had a good eye for design and a love for tech, so I became a Web Developer. 
               As a Developer, I deliver top-notch projects and services to my employers and clients.
               I am a good communicator and team player, always willing to learn and improve.
             </p>
@@ -226,10 +223,6 @@ const AboutPage = () => {
               </div>
             </motion.div>
           </div>
-        </div>
-        {/* SVG CONTAINER */}
-        <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
-          <Brain scrollYProgress={scrollYProgress} />
         </div>
       </div>
     </motion.div>
