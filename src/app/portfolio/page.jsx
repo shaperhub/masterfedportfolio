@@ -10,36 +10,36 @@ const items = [
     id: 1,
     color: "from-green-300 to-blue-300",
     title: "DineIntel",
-    desc: "This is a website I made for DineIntel, an app that revolutionizing dining through tech innovation.",
+    desc: "This is a website I made for DineIntel, an app that aims to revolutionize dining through tech innovation. The purpose of this website was to showcase the app, allow user authentication, account management, and subscription payments.",
     img: "/testdine.png",
     stack: "React, Next.js, Node.js, Firebase, Stripe, TailwindCSS, Shadcn",
-    link: "https://testdine.vercel.app",
+    link: "https://dineintel.io",
   },
   {
     id: 2,
     color: "from-green-300 to-blue-300",
     title: "POC Event",
-    desc: "I made this website for a non-profit organization. I worked with their UI design team and implemented their Figma designs.",
+    desc: "I made this website for an organization. I worked with their UI/UX design team and implemented their Figma designs. The purpose of this website was to explain the operations of the organization, showcase their events, and allow visitors sign up to receive emails about upcoming events",
     img: "/poc.png",
-    stack: "WordPress, PHP, MySQL, jQuery",
+    stack: "WordPress, PHP, MySQL, CSS, JavaScript, Mailchimp",
     link: "https://pocevent.com",
   },
   {
     id: 3,
     color: "from-blue-300 to-violet-300",
     title: "Travel Advisor App",
-    desc: "This is a project I made to practice use of multiple APIs interacting together.",
+    desc: "This is a project I made to practice the use of multiple filters with multiple APIs interacting together to showcase restaurants, hotels, and attractions in any selected location.",
     img: "/travel.png",
-    stack: "React, Material UI, Travel Advisor API, Google Maps API",
+    stack: "React, Material UI, Travel Advisor API, Google Maps API, Google Places API, Openweathermap API",
     link: "https://travsamp.vercel.app/",
   },
   {
     id: 4,
     color: "from-purple-300 to-red-300",
-    title: "My Former Portfolio",
-    desc: "This is one of my former portfolios. It has a sleek design and slide-in animations.",
+    title: "Leo's Portfolio",
+    desc: "This is a portfolio I made for a client. It has a sleek design and slide-in animations. The purpose of this website was to showcase the client's projects.",
     img: "/myname.png",
-    stack: "HTML, CSS, JavaScript, jQuery",
+    stack: "HTML, CSS, SASS, JavaScript, jQuery",
     link: "https://masterfed.com/myname",
   },
 ];
@@ -58,7 +58,7 @@ const PortfolioPage = () => {
         <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-4xl md:text-8xl text-center">
           My Projects
         </div>
-        <div className="flex flex-col gap-4 items-center overflow-hidden">
+        <div className="flex flex-col gap-4 items-center">
             <div className="flex items-center justify-center" />
             {items.map((item) => (
               <div
@@ -67,10 +67,10 @@ const PortfolioPage = () => {
               >
                 <div className="flex flex-col md:flex-row gap-8 pt-8 md:pt-16 text-white">
                   <div className="">
-                    <Image src={item.img} alt="" width={400} height={300} sizes="(max-width: 768px) 320px, (max-width: 1200px) 400px" blurDataURL={item.img} placeholder="blur" loading="lazy"/>
+                    <Image className="rounded-xl" src={item.img} alt={item.title} width={400} height={300} sizes="(max-width: 768px) 320px, (max-width: 1200px) 400px" blurDataURL={item.img} placeholder="blur" loading="lazy"/>
                   </div>
                   <div className="">
-                    <h1 className="text-xl font-bold md:text-3xl text-black">{item.title}</h1>
+                    <h1 className="text-xl font-bold md:text-3xl text-black mb-4">{item.title}</h1>
                     <p className="w-80 md:w-96 lg:w-[400px] text-black mb-4">{item.desc}</p>
                     <p className="w-80 md:w-96 lg:w-[400px] text-black"><span className="font-bold">Tech Stack: </span>{item.stack}</p>
                     <Link href={item.link} className="flex justify-start -mx-4">
@@ -98,7 +98,7 @@ const PortfolioPage = () => {
             </defs>
             <text fill="#000">
               <textPath xlinkHref="#circlePath" className="text-xl">
-                Front End Web Developer
+                Frontend Web Developer
               </textPath>
             </text>
           </motion.svg>
